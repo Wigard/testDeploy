@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alagas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://asset.alagas.net/shopy-vendor.css"/>
+    <link rel="stylesheet" href="https://asset.alagas.net/shopy-style.css"/>
+    <link rel="stylesheet" href="https://asset.alagas.net/alagas.css"/>
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
+      crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
+      crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@350&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
+      crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- Custom Style -->
+    <style>
+      /* Header Content */
+      .header-content {
+        background-image: url('src/img/background.png');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+      /* Mikrotik Logo */
+      .mikrotik-logo {
+        width: 300px;
+        padding-top: 5%;
+        margin: 0px auto;
+        display: block;
+      }
+      /* Heading Hardware Content */
+      .heading-hardware h1 {
+        margin-top: 5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 50px;
+      }
+      .heading-hardware h3 {
+        font-size: 25px;
+      }
+      .heading-hardware h1,
+      .heading-hardware h2,
+      .heading-hardware h3 {
+        text-align: center;
+        color: #fff;
+      }
+      .heading-hardware h2,
+      .heading-hardware h3 {
+        font-family: 'Open Sans', sans-serif;
+      }
+      /* Highlight hardware Content */
+      .h-item {
+        margin-top: 5%;
+        margin-left: 20%;
+      }
+      .h-item img {
+        width: 70px;
+      }
+      .h-item span {
+        color: #fff;
+      }
+      #shape1 {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #f26722;
+      }
+      #shape1::after {
+        content: '';
+        border-top: 11px solid transparent;
+        border-left: 30px solid #be3926;
+        border-bottom: 10px solid transparent;
+        position: absolute;
+        top: 118%;
+        left: 102%;
+        z-index: -1;
+        transform: rotate(-14deg);
+      }
+      #shape1 h3 {
+        margin-top: 8%; 
+        margin-left: 15%;
+        position: absolute;
+        z-index: 2;
+        line-height: 35px;
+        color: #fff;
+      }
+      #shape1 .item1 {
+        font-family: 'Kanit', sans-serif;
+        font-size: 43px;
+      }
+      #shape1 .item2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 43px;
+      } 
+      .badges-img-hardware {
+        content: '';
+        width: 27%;
+        height: 10.5%;
+        position: absolute;
+        top: 24%;
+        left: 55%;
+        transform: skew(-14deg)
+      }
+      .badges-img-hardware::before {
+        content: '';
+        border-top: 35px solid transparent;
+        border-right: 266px solid #d75227;
+        border-bottom: 30px solid transparent;
+        position: absolute;
+        top: 70%;
+        left: 0%;
+        z-index: -1;
+      }
+      .badges-img-hardware::after {
+        content: '';
+        border-top: 0px solid transparent;
+        border-left: 40px solid #be3926;
+        border-bottom: 30px solid transparent;
+        position: absolute;
+        top: 73%;
+        left: 99%;
+        z-index: -1;
+        transform: rotate(-7.5deg);
+      }
+      /* Footer Hardware Content */
+      .footer-content p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 17px;
+      }
+
+      /* Body Content */
+      /* Feature Hardware Content */
+      .feature-content {
+        height: 551px;
+        margin-bottom: 80px;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        background-image: linear-gradient(
+          to right,
+          #e0dede 20%,
+          #ffffff,
+          #ffffff
+        )
+      }
+      .feature-content::after {
+        content: '';
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background: linear-gradient(
+          104deg, 
+          rgba(0,0,0,1) 0%, 
+          rgba(15,16,19,1) 22%,
+          rgba(27,27,50,1) 39%, 
+          rgba(47,28,191,1) 56%,
+          rgba(57,26,213,1) 72%, 
+          rgba(22,24,195,1) 86%,
+          rgba(6,7,122,1) 94%, 
+          rgba(2,11,38,1) 100%
+        );
+      }
+      .feature-content .f-content {
+        margin-top: 10%;
+        margin-left: 10%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 27px;
+      }
+      .feature-content .f-content p {
+        margin-bottom: 45px;
+      }
+      .f-image {
+        width: 500px;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+      }
+      /* Summary Hardware Content */
+      .summary-content .f-content {
+        position: relative;
+        padding: 5px 0px;
+        margin: 10px 70px;
+        z-index: 0;
+        background: linear-gradient(
+          9deg, 
+          rgba(242,242,242,1) 0%,
+          rgba(247,247,247,1) 74%, 
+          rgba(255,255,255,1) 87%,
+          rgba(255,255,255,1) 100%
+        );
+      }
+      .summary-content .f-content::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background-color: #434ca7;
+      }
+      .summary-content .f-content::after {
+        content: '';
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: #bfbfbf;
+      }
+      .summary-content #shape2 {
+        content: '';
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        top: -90px;
+        left: 0;
+        z-index: -2;
+        background: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 99%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 99.1%, rgba(242, 242, 242, 0.9) 99%);
+      }
+      .summary-content #shape2::after {
+        content: '';
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+      }
+      .summary-content .f-content p {
+        padding: 50px 30px;
+        margin: 5px 10px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 27px;
+        background-color: #ffffff;
+      }
+      /* Content */
+      .content {
+        margin: 50px 70px;
+      }
+      .c-content p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 27px;
+      }
+      .s-content {
+        position: relative;
+      }
+      .s-content span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .s-content span::before {
+        content: '';
+        height: 3px;
+        flex-grow: 1;
+        background-color: #e6e6e6;
+      }
+      .s-content span::after {
+        content: '';
+        height: 3px;
+        flex-grow: 1;
+        background-color: #e6e6e6;
+      }
+      .s-content i {
+        margin: 0px 5px;
+        font-size: 40px;
+        color: #e6e6e6;
+      }
+      .s-content p {
+        padding: 35px;
+        margin-top: 27px;
+        border: 3px solid #e6e6e6;
+        border-top: none;
+        border-radius: 10px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 19px;
+        line-height: 30px;
+      }
+      .h-content {
+        margin-top: 40px;
+      }
+      .h-content p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 30px;
+      }
+      .h-content .text-img1 {
+        position: absolute;
+        color: #f2f2f2;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 24px;
+        bottom: 40px;
+        left: 50px;
+      }
+      .h-content .text-img2 {
+        position: absolute;
+        color: #f2f2f2;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 24px;
+        bottom: 10%;
+        left: 50px;
+      }
+      /* Specification Hardware */
+      .specification-table {
+        margin: 50px 70px;
+      }
+      .specification-table h3 {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        color: #646464;
+      }
+      .specification-table h3::after {
+        content: '';
+        height: 5px;
+        margin-left: 20px;
+        flex-grow: 1;
+        background-image: linear-gradient(
+          to right,
+          #f1f1f1,
+          #f1f1f1,
+          #ffffff
+        );
+      }
+      .specification-table h3 i {
+        font-size: 10px;
+        color: #d8432c;
+      }
+      .specification-table table {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+      }
+      .table th {
+        padding-left: 0;
+        border-right: 2px solid #f1f1f1;
+      }
+      .table th:first-child,
+      .table td {
+        border-top: none;
+      }
+      .included-item {
+        width: 200px;
+        border-radius: 20px;
+        background-image: linear-gradient(
+          to bottom,
+          #e2ebfd,
+          #f2f2f2,
+          #ffffff,
+          #ffffff
+        );
+      }
+      .included-item img {
+        width: 100%;
+      }
+      .included-item span i {
+        margin: 0 5px;
+        font-size: 7px;
+        color: #cccccc;
+
+      }
+      .included-item span::before {
+        content: '';
+        height: 3px;
+        flex-grow: 1;
+        background-image: linear-gradient(
+          to left,
+          #ebe9e9,
+          #f2f2f2,
+          #ffffff
+        );
+      }
+      .included-item span::after {
+        content: '';
+        height: 3px;
+        flex-grow: 1;
+        background-image: linear-gradient(
+          to right,
+          #ebe9e9,
+          #f2f2f2,
+          #f3f3f3
+        );
+      }
+      .included-item .text {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+      }
+
+      /* Responsive */
+      @media only screen and (max-width: 1599px) {
+        /* Highlight Hardware Content */
+        .badges-img-hardware::before {
+          border-top-width: 35px;
+          border-right-width: 266px;
+          border-bottom-width: 26.5px;
+        }
+        .badges-img-hardware::after {
+          border-left-width: 35px;
+          border-bottom-width: 28px;
+        }
+        #shape1::after {
+          border-top-width: 10px;
+          border-left-width: 27px;
+          top: 115%;
+          left: 101.5%;
+        }
+      }
+
+      @media only screen and (max-width: 1399px) {
+        /* Highlight Hardware Content */
+        .badges-img-hardware::before {
+          border-top-width: 31px;
+          border-right-width: 233px;
+          border-bottom-width: 26.5px;
+        }
+        #shape1::after {
+          top: 118%;
+          left: 101.5%;
+        }
+        #shape1 .item1,
+        #shape1 .item2 {
+          font-size: 37px;
+        }
+
+        
+        /* Feature Hardware Content */
+        .feature-content .f-content p {
+          margin-bottom: 82px;
+          font-size: 24px;
+        }
+
+        /* Summary Hardware Content */
+        .summary-content .f-content p {
+          font-size: 1.7vw;
+        }
+
+        /* Content */
+        .content .c-content p {
+          font-size: 1.7vw;
+        }
+        .content .s-content p {
+          font-size: 1.2vw;
+        }
+        .content .h-content p {
+          font-size: 2.2vw;
+        }
+        .h-content .text-img1 {
+          font-size: 1.4vw;
+        }
+        .h-content .text-img2 {
+          font-size: 1.4vw;
+        }
+      }
+
+      @media only screen and (max-width: 1199px) {
+        /* Heading Hardware Content */
+        .mikrotik-logo {
+          width: 25vw;
+        }
+        .heading-hardware h1 {
+          font-size: 4vw;
+        }
+        .heading-hardware h2 {
+          font-size: 2.5vw;
+        }
+        .heading-hardware h3 {
+          font-size: 2vw;
+        }
+
+        /* Highlight Hardware Content */
+        .h-item {
+          font-size: 1.5vw;
+        }
+        .h-item img {
+          width: 6vw;
+        }
+        .badges-img-hardware::before {
+          border-top-width: 2.7vw;
+          border-right-width: 20vw;
+          border-bottom-width: 2.2vw;
+        }
+        .badges-img-hardware::after {
+          border-left-width: 2.8vw;
+          border-bottom-width: 2.4vw;
+          top: 72%;
+        }
+        #shape1 h3 {
+          margin-top: 1vw;
+          line-height: 3vw;
+        }
+        #shape1::after {
+          border-top-width: 1vw;
+          border-left-width: 2.2vw;
+          border-bottom-width: 1vw;
+          top: 10.6vw;
+          left: 101%; 
+          transform: rotate(-17deg);
+        }
+        #shape1 .item1,
+        #shape1 .item2 {
+          font-size: 3vw;
+          line-height: 1vw;
+        }
+
+        /* Footer Hardware Content */
+        .footer-content h4 {
+          font-size: 1.9vw;
+        }
+        .footer-content p {
+          font-size: 1.5vw;
+        }
+        .footer-content h5 {
+          font-size: 1.7vw;
+        }
+
+        /* Feature Hardware Content */
+        .feature-content {
+          height: 46vw;
+        }
+        .feature-content::after {
+          height: 40vw;
+        }
+        .feature-content .f-content p {
+          margin-bottom: 6.7vw;
+          font-size: 2vw;
+        }
+        .feature-content .f-content iframe {
+          width: 28vw;
+          height: 15.5vw;
+        }
+        .feature-content .f-image {
+          width: 39.5vw;
+        }
+
+        /* Specification Hardware */
+        .specification-table h3 {
+          font-size: 2.5vw
+        }
+        .specification-table table {
+          font-size: 1.5vw;
+        }
+
+        /* Included Parts Content */
+        .included-item .text {
+          font-size: 1.5vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="py-1 bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="owl-carousel owl-carousel-promo" data-loop="true" data-items="[3,3,2,1]" 
+                data-margin="10" data-nav="true">
+                <h6 class="fs-14 text-uppercase text-center text-white m-0">
+                  <i class="icon-phone mr-1 text-opaque"></i> 
+                  +65 6745-4549
+                </h6>
+                <h6 class="fs-14 text-uppercase text-center text-white m-0">
+                  <i class="icon-award mr-1 text-opaque"></i> 
+                  12 Months of Warranty
+                </h6>
+                <h6 class="fs-14 text-uppercase text-center text-white m-0">
+                  <i class="icon-shield mr-1 text-opaque"></i> 
+                  Certified Engineer
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a href="/" class="navbar-brand order-1 order-lg-2">
+            <img height="70" src="https://asset.alagas.net/logo/logo%402x.png" alt="Logo">
+          </a>
+          <div class="collapse navbar-collapse order-4 order-lg-1" id="navbarMenu">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown dropdown-sm dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown-1" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Alagas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-1">
+                  <ul class="menu-list">
+                    <li class="menu-list-item">
+                      <a href="/about-us" class="menu-list-link">About Us</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="/career" class="menu-list-link">Work for us</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-lg dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown-2" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MikroTik
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+                  <div class="container">
+                    <div class="row gutter-1">
+                      <div class="col-lg-6">
+                        <div class="card card-tile">
+                          <figure class="card-image equal equal-50">
+                            <span class="image" 
+                              style="background-image: url(https://asset.alagas.net/images/nav-mikrotik.png)">
+                            </span>
+                          </figure>
+                          <div class="card-footer p-1">
+                            <div class="bg-white p-2">
+                              <div class="row align-items-center">
+                                <div class="col">
+                                  <h4 class="fs-20"><a href="#">
+                                    hAP ax<sup>3</sup> Multi Gig WAN</a>
+                                  </h4>
+                                </div>
+                                <div class="col text-right">Buy at
+                                  <a href="https://lazada.sg/search?keyword=atik%20plug%20%26%20play"
+                                    class="underline">
+                                    LazMall
+                                  </a>
+                                  <a href="https://shopee.sg/search?keyword=atik%20plug%20%26%20play"
+                                    class="underline">
+                                    Shopee
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <span class="eyebrow text-muted mb-1">MikroTik</span>
+                        <ul class="menu-list">
+                          <li class="menu-list-item">
+                            <a href="/mikrotik/" class="menu-list-link">Who is MikroTik?</a>
+                          </li>
+                          <li class="menu-list-item">
+                            <a href="/mikrotik/routeros" class="menu-list-link">What is RouterOS?</a>
+                          </li>
+                          <li class="menu-list-item">
+                            <a href="/mikrotik/switchos" class="menu-list-link">What is SwitchOS?</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-2">
+                        <span class="eyebrow text-muted mb-1">Hardware</span>
+                        <ul class="menu-list">
+                          <li class="menu-list-item">
+                            <a href="#" class="menu-list-link">Ethernet Router</a>
+                          </li>
+                          <li class="menu-list-item">
+                            <a href="#" class="menu-list-link">Switch</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-2">
+                        <span class="eyebrow text-muted mb-1">Certification Training</span>
+                        <ul class="menu-list">
+                          <li class="menu-list-item">
+                            <a href="#" class="menu-list-link">Network Associate</a>
+                          </li>
+                          <li class="menu-list-item">
+                            <a href="#" class="menu-list-link">Routing Engineer</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse order-5 order-lg-3" id="navbarMenu2">
+            <ul class="navbar-nav ml-auto position-relative">
+              <li class="d-none d-lg-inline nav-item">
+                <a target="_blank" href="https://support.alagas.net/" class="nav-icon">
+                  <i class="icon-help-circle d-none d-lg-inline-block"></i>
+                </a>
+              </li>
+              <li class="d-none d-lg-inline nav-item">
+                <a target="_blank" href="https://www.youtube.com/c/AlagasNetwork" class="nav-icon">
+                  <i class="icon-youtube d-none d-lg-inline-block"></i>
+                </a>
+              </li>
+              <li class="d-none d-lg-inline nav-item">
+                <a target="_blank" href="https://www.facebook.com/alagasnetwork/" class="nav-icon">
+                  <i class="icon-facebook d-none d-lg-inline-block"></i>
+                </a>
+              </li>
+              <!-- Cart Section -->
+              <li class="nav-item dropdown dropdown-md dropdown-hover">
+                <a class="nav-icon dropdown-toggle" id="navbarDropdown-8" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon-shopping-bag d-none d-lg-inline-block"></i>
+                    <span class="d-inline-block d-lg-none">Bag</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-8">
+                  <div class="row gutter-3">
+                    <div class="col-12">
+                      <h3 class="eyebrow text-dark fs-16 mb-0">Where to buy</h3>
+                    </div>
+                    <div class="col-12">
+                      <div class="cart-item">
+                        <a target="_blank" href="https://www.lazada.sg/shop/mikrotik/" class="cart-item-image">
+                          <img src="https://asset.alagas.net/estore/lazmall.png" alt="LazMall" />
+                        </a>
+                        <div class="cart-item-body">
+                          <div class="row">
+                            <div class="col-12">
+                              <h5 class="cart-item-title">LazMall</h5>
+                              <small>Local Shipping, Singapore Dollar</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-item">
+                        <a target="_blank" href="https://shopee.sg/alagasnet" class="cart-item-image">
+                          <img src="https://cfshopeesg-a.akamaihd.net/file/f0bfbe61296cce0f59ec3d0ca279eeb5?previousPage=other%20articles"
+                            alt="Shopee" />
+                        </a>
+                        <div class="cart-item-body">
+                          <div class="row">
+                            <div class="col-12">
+                              <h5 class="cart-item-title">Shopee</h5>
+                              <small>Local Shipping, Singapore Dollar</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-item">
+                        <a target="_blank" href="https://www.carousell.sg/u/alagasnet/" class="cart-item-image">
+                          <img src="https://asset.alagas.net/logo/carousell-logo.png" alt="Carousell">
+                        </a>
+                        <div class="cart-item-body">
+                          <div class="row">
+                            <div class="col-12">
+                              <h5 class="cart-item-title">Carousell</h5>
+                              <small>Like New/Used devices</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-item">
+                        <a target="_blank" href="http://discovery.ariba.com/profile/AN01413793483"
+                          class="cart-item-image">
+                          <img src="https://asset.alagas.net/logo/sap-ariba.png" alt="SAP Ariba">
+                        </a>
+                        <div class="cart-item-body">
+                          <div class="row">
+                            <div class="col-12">
+                              <h5 class="cart-item-title">SAP Ariba</h5>
+                              <small>Procurement</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-item">
+                        <a target="_blank" href="https://supplier.coupahost.com/suppliers/public/alagas-network-pte-ltd-yrk2z"
+                          class="cart-item-image">
+                          <img src="https://asset.alagas.net/logo/coupa.png" alt="Coupa Supplier Portal">
+                        </a>
+                        <div class="cart-item-body">
+                          <div class="row">
+                            <div class="col-12">
+                              <h5 class="cart-item-title">Coupa</h5>
+                              <small>Procurement</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="order-2 d-flex d-lg-none" id="navbarMenuMobile">
+            <ul class="navbar-nav navbar-nav--icons ml-auto position-relative">
+              <!-- search -->
+              <li class="nav-item">
+                <a href="" class="nav-icon"><i class="icon-search"></i></a>
+              </li>
+              <!-- cart -->
+              <li class="nav-item dropdown dropdown-md dropdown-hover">
+                <a href="" class="nav-icon"><i class="icon-shopping-bag"></i></a>
+              </li>
+              <!-- menu -->
+              <li class="nav-item dropdown dropdown-md dropdown-hover">
+                <a href="" class="nav-icon" data-toggle="collapse" data-target=".navbar-collapse"
+                  aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="icon-menu"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Body Section / Content Section -->
+    <div class="container-fluid">
+      <!-- Header Content -->
+      <div class="container-xl header-content">
+        <!-- Heading Hardware Content -->
+        <div class="heading-hardware">
+          <img class="mikrotik-logo" src="src/img/mikrotik-logo.png" alt="Mikrotik Logo" />
+          <h1>hAP ax<sup>2</sup></h1>
+          <h2>The next generation of home access point perfection.</h2>
+          <h3>Futuristic design. Classic value.</h3>
+        </div>
+        <!-- Highlight Hardware Content -->
+        <div class="row highlight-hardware">
+          <div class="col-4 d-flex align-items-center">
+            <div class="row">
+              <div class="d-flex align-items-center h-item">
+                <img src="src/icons/h-icon1.png" alt="Powerful Quad-Core ARM CPU" />
+                <span class="ms-4"><b>POWERFUL <br> QUAD-CORE ARM CPU</b></span>
+              </div>
+              <div class="d-flex align-items-center h-item">
+                <img src="src/icons/h-icon2.png" alt="802.11AX + WAVE2" />
+                <span class="ms-4"><b>802.11AX + WAVE2</b></span>
+              </div>
+              <div class="d-flex align-items-center h-item">
+                <img src="src/icons/h-icon3.png" alt="Strong Dual-Band, Dual-Chain Wireless (4-4.5 DBI)" />
+                <span class="ms-4"><b>STRONG DUAL-BAND, <br> DUAL-CHAIN WIRELESS <br> (4-4.5 DBI)</b></span>
+              </div>
+              <div class="d-flex align-items-center h-item">
+                <img src="src/icons/h-icon4.png" alt="5X Gigabit Ethernet Ports" />
+                <span class="ms-4"><b>5X GIGABIT ETHERNET <br> PORTS</b></span>
+              </div>
+              <div class="d-flex align-items-center h-item">
+                <img src="src/icons/h-icon5.png" alt="Poe-Out" />
+                <span class="ms-4"><b>POE-OUT</b></span>
+              </div>
+              <div class="d-flex align-items-center h-item">
+                <img src="src/icons/h-icon6.png" alt="Different Mounting Options" />
+                <span class="ms-4"><b>DIFFERENT MOUNTING <br> OPTIONS</b></span>
+              </div>
+              <div class="d-flex align-items-center h-item">
+                <img src="src/icons/h-icon7.png" alt="WPA3" />
+                <span class="ms-4"><b>WPA3</b></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="position-relative">
+              <img class="img-hardware" src="src/img/hAPax2.png" alt="hAPax2" />
+              <div class="badges-img-hardware">
+                <div id="shape1">
+                <h3>
+                  <span class="item1">Gen 6</span><br>
+                  <span class="item2"><b>Wireless</b></span>
+                </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Hardware Content -->
+        <div class="container-xl pb-5 text-center text-white footer-content">
+          <h4><b>THE SMALLLEST FULLY-FLEDGED AX ROUTER ON THE MARKET!</b></h4>
+          <p>Like the previous models, hAP ax<sup>2</sup> can be mounted vertically 
+            horizontally, or even on the wall - without sacrificing the strong signal.
+          </p>
+          <h5>We did our best to create the smallest dual-band AX router on the market. Enjoy next level <br>
+            connectivity without giant, obtrusive devices that take up way to much space!
+          </h5>
+        </div>
+      </div>
+      <!-- Body Content -->
+      <div class="container-xl p-0 body-content">
+        <!-- Feature Hardware Content -->
+        <div class="feature-content">
+          <div class="row">
+            <div class="col-7">
+              <div class="f-content">
+                <p>It’s time to supercharge your home network with the <br>
+                  Generation 6 wireless network and our latest addition <br>
+                  to the beloved hAP series. hAP ax² has everything <br>
+                  you might need in a primary home access point – <br>
+                  and more! Forget endless reviews and comparisons <br>
+                  – this is the perfect device for 99% of homes.
+                </p>
+                <iframe width="320" height="185" src="https://www.youtube.com/embed/aRPKUDvNyjM?controls=0" 
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+            <div class="col-5 position-relative">
+              <img class="f-image" src="src/img/hAPax2(2).png" alt="hAPax2" />
+            </div>
+          </div>
+        </div>
+        <!-- Summary Hardware Content -->
+        <div class="summary-content">
+          <div class="f-content">
+            <p><i>
+              <strong>Wireless signal is now stronger than ever.</strong> Here are the two main ingredients <br>
+              of hAP ax’s success: a state-of-the-art dual-band, dual-chain 4-4.5 dBi radio, <br>
+              and the 802.11ax standard with Wave2 support. Let’s compare it to the previous <br>
+              generation: depending on your overall setup, that means up to 40% higher <br>
+              speed in the 5 GHz and up to 90% higher speed in the 2.4 GHz spectrum!</i>
+            </p>
+            <div id="shape2"></div>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="content">
+          <div class="c-content">
+            <div class="row">
+              <div class="col-6">
+                <p>Some might ask – why do we even need  <br>
+                  higher wireless speeds? Well, countless use <br>
+                  cases have been previously impossible or <br>
+                  difficult to pull off. For example, working with <br>
+                  large media files over the wireless network <br>
+                  – without the need to download and upload <br>
+                  everything. Do you really have the time to <br>
+                  wait? Grab a hAP ax² and save more time <br>
+                  for the essential things in life!
+                </p>
+              </div>
+              <div class="col-6">
+                <img src="src/img/hAPax2-net.png" alt="hAPax2 Networking" />
+              </div>
+            </div>
+          </div>
+          <div class="s-content">
+            <div class="row">
+              <span class="p-0 d-flex align-items-center">
+                <i class="bi bi-exclamation-circle"></i>
+              </span>
+              <p>
+                The wireless interface supports 802.11ax and is backward compatible with older wireless standards. Older client <br>
+                devices that only support 802.11ac will still benefit from multiple additional 802.11ac Wave 2 features, such as MU-MIMO <br>
+                and explicit beamforming.
+              </p>
+            </div>
+          </div>
+          <div class="h-content">
+            <div class="row">
+              <p>The modern quad-core CPU running at 864 MHz combined with a solid GB of RAM 
+                packs a hefty punch when it comes to heavy operations like <b>complex firewall rules</b>,
+                <b>IPsec hardware encryption, using more threads</b> or experimenting with the most
+                advanced RouterOS features. And with the addition of WPA3 advanced encryption
+                support, you’re safer than ever before.
+              </p>
+            </div>
+            <div class="row m-0 position-relative">
+              <img class="p-0" src="src/img/highlight-img1.png" alt="Highlight Image 1" />
+              <span class="text-img1">
+                Like the previous models, <b>hAP ax²</b> can be <br>
+                mounted vertically, horizontally, or even on <br>
+                the wall – without sacrificing the strong signal!
+              </span>
+            </div>
+            <div class="row m-0 position-relative">
+              <img class="p-0" src="src/img/highlight-img2.png" alt="Highlight Image 2" />
+              <span class="text-img2">
+                With so many products and features on <br>
+                the market, even an experienced user can <br>
+                become confused. So it’s time for a <b>simple <br>
+                  truth for a simple choice</b>: you can’t go wrong <br>
+                with a <b>hAP ax²</b> in most homes. 
+              </span>
+            </div>
+          </div>
+          <hr class="mt-5">
+        </div>
+        <!-- Specification Hardware -->
+        <div class="specification-table">
+          <!-- Specifications Table -->
+          <h3>
+            <i class="bi bi-hexagon-fill me-3"></i>
+            <b>Specifications</b>
+          </h3>
+          <table class="table">
+            <tr>
+              <th>Product code</th>
+              <td>C52iG-5HaxD2HaxD-TC</td>
+            </tr>
+            <tr>
+              <th>CPU</th>
+              <td>Quad-Core IPQ-6010 864 MHz</td>
+            </tr>
+            <tr>
+              <th>CPU architecture</th>
+              <td>ARM 64bit</td>
+            </tr>
+            <tr>
+              <th>Size of RAM</th>
+              <td>1 GB</td>
+            </tr>
+            <tr>
+              <th>Storage</th>
+              <td>128 MB, NAND</td>
+            </tr>
+            <tr>
+              <th>Number of 1G Ethernet ports</th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <th>Number of 1G Ethernet ports with PoE-out</th>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th>Switch chip model</th>
+              <td>IPQ-6010</td>
+            </tr>
+            <tr>
+              <th>Wireless interface model</th>
+              <td>QCN-5052 (2.4 GHz), QCN-5052 (5 GHz)</td>
+            </tr>
+            <tr>
+              <th>Wireless</th>
+              <td>2.4 GHz 802.11ax dual-chain, 5 GHz 802.11 802.11ax dual-chain</td>
+            </tr>
+            <tr>
+              <th>Wireless antenna max gain</th>
+              <td>2.4 GHz (4.5 dBi), 5 GHz (4 dBi)</td>
+            </tr>
+            <tr>
+              <th>Dimensions</th>
+              <td>120 x 101 x 37 mm</td>
+            </tr>
+            <tr>
+              <th>Operating system</th>
+              <td>RouterOS, License level 4</td>
+            </tr>
+            <tr>
+              <th>Operating temperature</th>
+              <td>-40°C to +50°C</td>
+            </tr>
+          </table>
+          <!-- Powering Table -->
+          <h3>
+            <i class="bi bi-hexagon-fill me-3"></i>
+            <b>Powering</b>
+          </h3>
+          <table class="table">
+            <tr>
+              <th>Number of DC inputs</th>
+              <td>2 (PoE-in, DC jack)</td>
+            </tr>
+            <tr>
+              <th>PoE-in input Voltage</th>
+              <td>18-28 V</td>
+            </tr>
+            <tr>
+              <th>DC jack input Voltage</th>
+              <td>12-28 V</td>
+            </tr>
+            <tr>
+              <th>PoE-out</th>
+              <td>Passive PoE Ether1, max out per port output (input < 30 V): 600mA</td>
+            </tr>
+            <tr>
+              <th>Max total out</th>
+              <td>0.6 A</td>
+            </tr>
+            <tr>
+              <th>Total output power</th>
+              <td>16.8 W</td>
+            </tr>
+            <tr>
+              <th>Power adapter nominal voltage</th>
+              <td>24 V</td>
+            </tr>
+            <tr>
+              <th>Power adapter nominal current</th>
+              <td>1.2 A</td>
+            </tr>
+            <tr>
+              <th>Max power consumption (without attachments)</th>
+              <td>12 W</td>
+            </tr>
+            <tr>
+              <th>Max power consumption</th>
+              <td>27 W</td>
+            </tr>
+          </table>
+          <!-- Wireless Specifications -->
+          <h3>
+            <i class="bi bi-hexagon-fill me-3"></i>
+            <b>Wireless specifications</b>
+          </h3>
+          <div class="row">
+            <div class="col-md-6">
+              <table class="table">
+                <tr>
+                  <th>Rate (2.4 GHz)</th>
+                  <td>Tx (dBm)</td>
+                  <td>Rx (dBm)</td>  
+                </tr>
+                <tr>
+                  <th>1MBit/s</th>
+                  <td>22</td>
+                  <td>-100</td>
+                </tr>
+                <tr>
+                  <th>11MBit/s</th>
+                  <td>22</td>
+                  <td>-94</td>
+                </tr>
+                <tr>
+                  <th>6MBit/s</th>
+                  <td>24</td>
+                  <td>-96</td>
+                </tr>
+                <tr>
+                  <th>54MBit/s</th>
+                  <td>22</td>
+                  <td>-80</td>
+                </tr>
+                <tr>
+                  <th>MCS0</th>
+                  <td>24</td>
+                  <td>-96</td>
+                </tr>
+                <tr>
+                  <th>MCS7</th>
+                  <td>21</td>
+                  <td>-75</td>
+                </tr>
+                <tr>
+                  <th>MCS9</th>
+                  <td>19</td>
+                  <td>-70</td>
+                </tr>
+                <tr>
+                  <th>MCS11</th>
+                  <td>17</td>
+                  <td>-67</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <table class="table">
+                <tr>
+                  <th>Rate (5 GHz)</th>
+                  <td>Tx (dBm)</td>
+                  <td>Rx (dBm)</td>
+                </tr>
+                <tr>
+                  <th>6MBit/s</th>
+                  <td>23</td>
+                  <td>-96</td>
+                </tr>
+                <tr>
+                  <th>54MBit/s</th>
+                  <td>20</td>
+                  <td>-80</td>
+                </tr>
+                <tr>
+                  <th>MCS0</th>
+                  <td>22</td>
+                  <td>-96</td>
+                </tr>
+                <tr>
+                  <th>MCS7</th>
+                  <td>19</td>
+                  <td>-75</td>
+                </tr>
+                <tr>
+                  <th>MCS9</th>
+                  <td>17</td>
+                  <td>-70</td>
+                </tr>
+                <tr>
+                  <th>MCS11</th>
+                  <td>15</td>
+                  <td>-67</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- Included Parts Content -->
+          <h3>
+            <i class="bi bi-hexagon-fill me-3"></i>
+            <b>Included parts</b>
+          </h3>
+          <div class="d-flex flex-row included-part">
+            <div class="included-item">
+              <img src="src/img/power-adapter.png" alt="Power Adapter" />
+              <span class="d-flex align-items-center"><i class="bi bi-hexagon-fill"></i></span>
+              <span class="d-block text text-center">24 V 1.2 A <br> power adapter</span>
+            </div>
+            <div class="ms-3 included-item">
+              <img src="src/img/fastening-set.png" alt="Fastening Set" />
+              <span class="d-flex align-items-center"><i class="bi bi-hexagon-fill"></i></span>
+              <span class="d-block text text-center">Fastening <br> set</span>
+            </div>
+            <div class="ms-3 included-item">
+              <img src="src/img/case-base.png" alt="Case Base" />
+              <span class="d-flex align-items-center"><i class="bi bi-hexagon-fill"></i></span>
+              <span class="d-block text text-center">Case Base</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="bg-dark pb-0 text-white">
+      <div class="container">
+        <div class="row justify-content-md-between gutter-2"> 
+          <!-- menu -->
+          <div class="order-1 col-md-8 col-lg-4">
+            <div class="row">
+              <div class="col">
+                <h4 class="eyebrow mb-1">Company</h4>
+                <ul class="menu-list">
+                  <li class="menu-list-item"><a href="/about-us" class="menu-list-link">Our story</a></li>
+                  <li class="menu-list-item"><a href="/career" class="menu-list-link">Careers</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Press</a></li>
+                  <li class="menu-list-item"><a href="/contact/" class="menu-list-link">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="eyebrow mb-1">Useful Links</h4>
+                <ul class="menu-list">
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Training</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Warranty</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Payment</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- subscribe -->
+          <div class="order-2 order-md-3 order-lg-2 col-md-8 col-lg-4">
+            <h4 class="eyebrow mb-1">Subscribe to Newsletter</h4>
+            <div class="input-combined mb-2">
+              <input type="text" class="form-control" placeholder="First Name" aria-label="First Name"
+                aria-describedby="button-addon2">
+              <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name"
+                aria-describedby="button-addon2">
+              <input type="text" class="form-control" placeholder="Your email" aria-label="Your Email"
+                aria-describedby="button-addon2">
+              <input type="hidden" name="cmd" value="subscribe"/>
+              <input type="hidden" name="list" value="AlagasNet General"/>
+              <button class="btn btn-white" type="button" id="button-addon2">Subscribe</button>
+              <span class="input-combined_indicator"></span>
+            </div>
+            <ul class="list list--horizontal">
+              <li>
+                <a href="https://facebook.com/AlagasNetwork" class="text-hover-facebook">
+                  <i class="fs-28 icon-facebook-square-brands"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/c/AlagasNetwork" class="text-hover-youtube">
+                  <i class="fs-28 icon-youtube-square-brands"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- settings -->
+          <div class="order-3 order-md-2 order-lg-3 col-md-4 col-lg-3">
+            <h4 class="eyebrow mb-1">Office Address</h4>
+            <div>
+              47 Kallang Pudding Road<br/>
+              #06-02 Crescent @ Kallang<br/>
+              Singapore 349318<br/><br />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.74502049315!2d103.87710531457199!3d1.3290194620126732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17863117e4c5%3A0x2d6bd526388a3671!2sALAGAS%20NETWORK%20PTE%20LTD!5e0!3m2!1sen!2ssg!4v1667130753213!5m2!1sen!2ssg" 
+                height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-transparent mt-8 py-2">
+        <div class="container">
+          <div class="row align-items-center gutter-1">
+            <div class="col-md-8">
+              <p class="small text-muted">&copy; 2011-2023 ALAGAS NETWORK PTE. LTD. .</p>
+            </div>
+            <div class="col-md-4 text-md-right text-muted">
+              <ul class="list list--horizontal list--separated">
+                <li>
+                  <a class="small underline" href="/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class="small underline" href="/terms-and-conditions">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+    </script>
+    <script src="https://asset.alagas.net/shopy-vendor.min.js"></script>
+    <script src="https://asset.alagas.net/shopy-app.js"></script>
+  </body>
+</html>
