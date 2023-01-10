@@ -419,23 +419,49 @@
       }
 
         /* Social Media Share */
-        .social-media {
+        /* Header */
+        .social-media-header h3 {
+          margin: 0;
+          padding: 2px 5px;
+          border-radius: 5px;;
+          display: block;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 17px;
+          color: #ffffff;
+          background-color: #062d58;
+        }
+        .social-media-header .bi {
+          margin: 0px 5px;
+          font-size: 20px;
+        }
+        /* Twitter */
+        .social-media-header .bi-twitter {
+          color: #1DA1F2;
+        }
+        .social-media-header .bi-twitter:hover {
+          color: #000;
+        }
+        /* Telegram */
+        .social-media-header .bi-telegram {
+          color: #0088CC;
+        }
+        .social-media-header .bi-telegram:hover {
+          color: #000;
+        }
+        /* Footer */
+        .social-media-footer {
           margin: 50px 70px;
         }
-        .social-media h3 {
-          font-family: 'Open Sans', sans-serif;
-          font-size: 15px;
-        }
-        .social-media .bi {
+        .social-media-footer .bi {
           margin: 0px 10px;
           font-size: 35px;
         }
         /* Twitter */
-        .bi-twitter:hover {
+        .social-media-footer .bi-twitter:hover {
           color: #1DA1F2;
         }
         /* Telegram */
-        .bi-telegram:hover {
+        .social-media-footer .bi-telegram:hover {
           color: #0088CC;
         }
 
@@ -475,7 +501,6 @@
           font-size: 37px;
         }
 
-        
         /* Feature Hardware Content */
         .feature-content .f-content p {
           margin-bottom: 82px;
@@ -853,6 +878,18 @@
             </ul>
           </div>
         </nav>
+        <!-- Social Media Share -->
+        <div class="social-media-header">
+          <div class="d-flex flex-row justify-content-start align-items-center">
+            <h3><i>share:</i></h3>
+            <a href="https://twitter.com/intent/tweet?text=https://wigard.github.io/testDeploy/" target="_blank">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://t.me/share/url?url=https://wigard.github.io/testDeploy/" target="_blank">
+              <i class="bi bi-telegram"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Body Section / Content Section -->
@@ -1257,8 +1294,8 @@
           </div>
         </div>
         <!-- Social Media Share -->
-        <div class="social-media">
-          <h3 class="text-center">Share Post :</h3>
+        <div class="social-media-footer">
+          <h3 class="text-center">Share:</h3>
           <div class="d-flex flex-row justify-content-center align-items-center">
             <a href="https://twitter.com/intent/tweet?text=https://wigard.github.io/testDeploy/" target="_blank">
               <i class="bi bi-twitter"></i>
