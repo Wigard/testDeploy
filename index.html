@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alagas</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Alagas / Asset -->
     <link rel="stylesheet" href="https://asset.alagas.net/shopy-vendor.css"/>
     <link rel="stylesheet" href="https://asset.alagas.net/shopy-style.css"/>
     <link rel="stylesheet" href="https://asset.alagas.net/alagas.css"/>
@@ -14,630 +17,111 @@
       crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
       crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@350&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
-      crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet" />
-    <!-- Bootstrap Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <!-- Open Graph -->
-    <link rel="canonical" href="https://wigard.github.io/testDeploy/" />
-    <meta property="site_name" content="Alagas Network" />
-    <meta property="og:title" content="Alagas Network / hAPax2" />
-    <meta property="og:image" content="https://wigard.github.io/testDeploy/src/img/og_image.png" />
-    <meta property="og:description" 
-      content="We did our best to create the smallest dual-band AX router on the market. 
-      Enjoy next level connectivity without giant, obtrusive devices that take up way to much space!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://wigard.github.io/testDeploy/" />
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Alagas Network / hAPax2" />
-    <!-- Custom Style -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!-- Style Custom -->
     <style>
-      /* Header Content */
-      .header-content {
-        background-image: url('src/img/background.png');
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
-      }
-      /* Mikrotik Logo */
-      .mikrotik-logo {
-        width: 300px;
-        padding-top: 5%;
-        margin: 0px auto;
-        display: block;
-      }
-      /* Heading Hardware Content */
-      .heading-hardware h1 {
-        margin-top: 5%;
-        font-family: 'Poppins', sans-serif;
-        font-size: 50px;
-      }
-      .heading-hardware h3 {
-        font-size: 25px;
-      }
-      .heading-hardware h1,
-      .heading-hardware h2,
-      .heading-hardware h3 {
-        text-align: center;
-        color: #fff;
-      }
-      .heading-hardware h2,
-      .heading-hardware h3 {
-        font-family: 'Open Sans', sans-serif;
-      }
-      /* Highlight hardware Content */
-      .h-item {
-        margin-top: 5%;
-        margin-left: 20%;
-      }
-      .h-item img {
-        width: 70px;
-      }
-      .h-item span {
-        color: #fff;
-      }
-      #shape1 {
-        content: '';
+      /* Product Item */
+      .large-image-thumbnail {
         width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background-color: #f26722;
+        margin-bottom: 10px;
+        border: 1px solid #e6e6e6;
       }
-      #shape1::after {
-        content: '';
-        border-top: 11px solid transparent;
-        border-left: 30px solid #be3926;
-        border-bottom: 10px solid transparent;
-        position: absolute;
-        top: 118%;
-        left: 102%;
-        z-index: -1;
-        transform: rotate(-14deg);
-      }
-      #shape1 h3 {
-        margin-top: 8%; 
-        margin-left: 15%;
-        position: absolute;
-        z-index: 2;
-        line-height: 35px;
-        color: #fff;
-      }
-      #shape1 .item1 {
-        font-family: 'Kanit', sans-serif;
-        font-size: 43px;
-      }
-      #shape1 .item2 {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 43px;
-      } 
-      .badges-img-hardware {
-        content: '';
-        width: 27%;
-        height: 10.5%;
-        position: absolute;
-        top: 24%;
-        left: 55%;
-        transform: skew(-14deg)
-      }
-      .badges-img-hardware::before {
-        content: '';
-        border-top: 35px solid transparent;
-        border-right: 266px solid #d75227;
-        border-bottom: 30px solid transparent;
-        position: absolute;
-        top: 70%;
-        left: 0%;
-        z-index: -1;
-      }
-      .badges-img-hardware::after {
-        content: '';
-        border-top: 0px solid transparent;
-        border-left: 40px solid #be3926;
-        border-bottom: 30px solid transparent;
-        position: absolute;
-        top: 73%;
-        left: 99%;
-        z-index: -1;
-        transform: rotate(-7.5deg);
-      }
-      /* Footer Hardware Content */
-      .footer-content p {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 17px;
-      }
-
-      /* Body Content */
-      /* Feature Hardware Content */
-      .feature-content {
-        height: 551px;
-        margin-bottom: 80px;
-        position: relative;
-        z-index: 1;
-        color: #fff;
-        background-image: linear-gradient(
-          to right,
-          #e0dede 20%,
-          #ffffff,
-          #ffffff
-        )
-      }
-      .feature-content::after {
-        content: '';
-        width: 100%;
-        height: 500px;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        background: linear-gradient(
-          104deg, 
-          rgba(0,0,0,1) 0%, 
-          rgba(15,16,19,1) 22%,
-          rgba(27,27,50,1) 39%, 
-          rgba(47,28,191,1) 56%,
-          rgba(57,26,213,1) 72%, 
-          rgba(22,24,195,1) 86%,
-          rgba(6,7,122,1) 94%, 
-          rgba(2,11,38,1) 100%
-        );
-      }
-      .feature-content .f-content {
-        margin-top: 10%;
-        margin-left: 10%;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 27px;
-      }
-      .feature-content .f-content p {
-        margin-bottom: 45px;
-      }
-      .f-image {
-        width: 500px;
-        height: auto;
-        position: absolute;
-        z-index: 2;
-      }
-      /* Summary Hardware Content */
-      .summary-content .f-content {
-        position: relative;
-        padding: 5px 0px;
-        margin: 10px 70px;
-        z-index: 0;
-        background: linear-gradient(
-          9deg, 
-          rgba(242,242,242,1) 0%,
-          rgba(247,247,247,1) 74%, 
-          rgba(255,255,255,1) 87%,
-          rgba(255,255,255,1) 100%
-        );
-      }
-      .summary-content .f-content::before {
-        content: '';
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        background-color: #434ca7;
-      }
-      .summary-content .f-content::after {
-        content: '';
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background-color: #bfbfbf;
-      }
-      .summary-content #shape2 {
-        content: '';
-        width: 100%;
+      .large-image-thumbnail img {
         height: 300px;
-        position: absolute;
-        top: -90px;
-        left: 0;
-        z-index: -2;
-        background: 
-        linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 99%),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 99.1%, rgba(242, 242, 242, 0.9) 99%);
       }
-      .summary-content #shape2::after {
-        content: '';
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -2;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-      }
-      .summary-content .f-content p {
-        padding: 50px 30px;
-        margin: 5px 10px;
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 27px;
-        background-color: #ffffff;
-      }
-      /* Content */
-      .content {
-        margin: 50px 70px;
-      }
-      .c-content p {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 27px;
-      }
-      .s-content {
-        position: relative;
-      }
-      .s-content span {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%);
-      }
-      .s-content span::before {
-        content: '';
-        height: 3px;
-        flex-grow: 1;
-        background-color: #e6e6e6;
-      }
-      .s-content span::after {
-        content: '';
-        height: 3px;
-        flex-grow: 1;
-        background-color: #e6e6e6;
-      }
-      .s-content i {
-        margin: 0px 5px;
-        font-size: 40px;
-        color: #e6e6e6;
-      }
-      .s-content p {
-        padding: 35px;
-        margin-top: 27px;
-        border: 3px solid #e6e6e6;
-        border-top: none;
-        border-radius: 10px;
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 19px;
-        line-height: 30px;
-      }
-      .h-content {
-        margin-top: 40px;
-      }
-      .h-content p {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 30px;
-      }
-      .h-content .text-img1 {
-        position: absolute;
-        color: #f2f2f2;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 24px;
-        bottom: 40px;
-        left: 50px;
-      }
-      .h-content .text-img2 {
-        position: absolute;
-        color: #f2f2f2;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 24px;
-        bottom: 10%;
-        left: 50px;
-      }
-      /* Specification Hardware */
-      .specification-table {
-        margin: 50px 70px;
-      }
-      .specification-table h3 {
-        margin-top: 80px;
-        margin-bottom: 30px;
+      .small-image-thumbnail .item {
+        width: 120px;
+        height: 70px;
+        border: 1px solid #e6e6e6;
         display: flex;
-        align-items: center;
-        font-size: 30px;
-        color: #646464;
-      }
-      .specification-table h3::after {
-        content: '';
-        height: 5px;
-        margin-left: 20px;
-        flex-grow: 1;
-        background-image: linear-gradient(
-          to right,
-          #f1f1f1,
-          #f1f1f1,
-          #ffffff
-        );
-      }
-      .specification-table h3 i {
-        font-size: 10px;
-        color: #d8432c;
-      }
-      .specification-table table {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 20px;
-      }
-      .table th {
-        padding-left: 0;
-        border-right: 2px solid #f1f1f1;
-      }
-      .table th:first-child,
-      .table td {
-        border-top: none;
-      }
-      .included-item {
-        width: 200px;
-        border-radius: 20px;
-        background-image: linear-gradient(
-          to bottom,
-          #e2ebfd,
-          #f2f2f2,
-          #ffffff,
-          #ffffff
-        );
-      }
-      .included-item img {
-        width: 100%;
-      }
-      .included-item span i {
-        margin: 0 5px;
-        font-size: 7px;
-        color: #cccccc;
+        justify-content: center;
 
       }
-      .included-item span::before {
-        content: '';
-        height: 3px;
-        flex-grow: 1;
-        background-image: linear-gradient(
-          to left,
-          #ebe9e9,
-          #f2f2f2,
-          #ffffff
-        );
+      .small-image-thumbnail img {
+        height: 69px;
+        opacity: 0.7;
       }
-      .included-item span::after {
-        content: '';
-        height: 3px;
-        flex-grow: 1;
-        background-image: linear-gradient(
-          to right,
-          #ebe9e9,
-          #f2f2f2,
-          #f3f3f3
-        );
+      .small-image-thumbnail img:hover {
+        opacity: 1;
       }
-      .included-item .text {
+
+      /* Detail Product */
+      /* Title Product */
+      .title-product h2 {
+        font-family: 'Poppins', sans-serif;  
+        color: #404040;
+      }
+
+      /* Pricing Product */
+      .pricing-product h4 {
+        font-family: 'Poppins', sans-serif;  
+        color: #1ABC9C;
+      }
+      .count-quantity #subtract,
+      .count-quantity #addition {
+        width: 30px;
+        border: 1px solid #e6e6e6;
         text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 20px;
+      }
+      .count-quantity #count {
+        width: 50px;
+        border: 1px solid #f2f2f2;
+        text-align: center;
+      }
+      .pricing-product span {
+        font-size: 12px;
+      }
+      .pricing-product .col-3 {
+        font-family: monospace;
+        color: #404040;
+      }
+      .pricing-product button {
+        transition: background-image 0.5s;
+      }
+      .pricing-product button:hover {
+        box-shadow: 0px 0px 2px #30802a;
+      }
+      /* Share Button */
+      .share-button {
+        width: 140px;
+        overflow: hidden;
+        text-align: center;
+      }
+      .share-button .bi-share {
+        z-index: 2;
+        background-color: #fff;
+      }
+      .share-button:hover .item i {
+        left: 10px;
+        z-index: 1;
+        transition: left 0.5s;
+      }
+      .item i {
+        width: 30px;
+        margin: 0px 5px;
+        position: relative;
+        left: -120px;
+        z-index: -1;
       }
 
-        /* Social Media Share */
-        /* Header */
-        .social-media {
-          position: fixed;
-          top: 50%;
-          left: 0px;
-          z-index: 1;
-        }
-        .social-media-header {
-          width: 200px;
-          height: 200px;
-          position: relative;
-          overflow: hidden;
-        }
-        .social-media-header .bi-share {
-          width: 40px;
-          height: 100px;
-          padding: 5px;
-          border-radius: 5px;
-          z-index: 1;
-          font-size: 20px;
-          text-align: center;
-          color: #000000;
-          background-color: rgb(252, 252, 252);
-          box-shadow: 0 0 10px #c9c7c7;
-        }
-        .social-media-header:hover .all-item {
-          left: 50px;
-          z-index: 0;
-          transition: all 0.5s;
-        }
-        .social-media-header a .bi {
-          margin: 0px 5px;
-          font-size: 20px;
-        }
-        /* All */
-        .all-item {
-          position: absolute;
-          z-index: -1;
-          left: -60px;
-        }
-        /* Twitter */
-        .social-media-header .bi-twitter {
-          color: #1DA1F2;
-        }
-        .social-media-header .bi-twitter:hover {
-          color: #000;
-        }
-        /* Telegram */
-        .social-media-header .bi-telegram {
-          color: #0088CC;
-        }
-        .social-media-header a .bi-telegram:hover {
-          color: #000;
-        }
-        /* Facebook */
-        .social-media-header .bi-facebook {
-          color: #3b5998;
-        }
-        .social-media-header a .bi-facebook:hover {
-          color: #000;
-        }
-
-      /* Responsive */
-      @media only screen and (max-width: 1599px) {
-        /* Highlight Hardware Content */
-        .badges-img-hardware::before {
-          border-top-width: 35px;
-          border-right-width: 266px;
-          border-bottom-width: 26.5px;
-        }
-        .badges-img-hardware::after {
-          border-left-width: 35px;
-          border-bottom-width: 28px;
-        }
-        #shape1::after {
-          border-top-width: 10px;
-          border-left-width: 27px;
-          top: 115%;
-          left: 101.5%;
-        }
+      /* Description */
+      /* Nav Tabs */
+      .nav .nav-link.active {
+        color: #fff;
       }
-
-      @media only screen and (max-width: 1399px) {
-        /* Highlight Hardware Content */
-        .badges-img-hardware::before {
-          border-top-width: 31px;
-          border-right-width: 233px;
-          border-bottom-width: 26.5px;
-        }
-        #shape1::after {
-          top: 118%;
-          left: 101.5%;
-        }
-        #shape1 .item1,
-        #shape1 .item2 {
-          font-size: 37px;
-        }
-
-        /* Feature Hardware Content */
-        .feature-content .f-content p {
-          margin-bottom: 82px;
-          font-size: 24px;
-        }
-
-        /* Summary Hardware Content */
-        .summary-content .f-content p {
-          font-size: 1.7vw;
-        }
-
-        /* Content */
-        .content .c-content p {
-          font-size: 1.7vw;
-        }
-        .content .s-content p {
-          font-size: 1.2vw;
-        }
-        .content .h-content p {
-          font-size: 2.2vw;
-        }
-        .h-content .text-img1 {
-          font-size: 1.4vw;
-        }
-        .h-content .text-img2 {
-          font-size: 1.4vw;
-        }
+      /* Tab Panes */
+      #description ul {
+        list-style-type: disc;
+        list-style-position: inside;
       }
-
-      @media only screen and (max-width: 1199px) {
-        /* Heading Hardware Content */
-        .mikrotik-logo {
-          width: 25vw;
-        }
-        .heading-hardware h1 {
-          font-size: 4vw;
-        }
-        .heading-hardware h2 {
-          font-size: 2.5vw;
-        }
-        .heading-hardware h3 {
-          font-size: 2vw;
-        }
-
-        /* Highlight Hardware Content */
-        .h-item {
-          font-size: 1.5vw;
-        }
-        .h-item img {
-          width: 6vw;
-        }
-        .badges-img-hardware::before {
-          border-top-width: 2.7vw;
-          border-right-width: 20vw;
-          border-bottom-width: 2.2vw;
-        }
-        .badges-img-hardware::after {
-          border-left-width: 2.8vw;
-          border-bottom-width: 2.4vw;
-          top: 72%;
-        }
-        #shape1 h3 {
-          margin-top: 1vw;
-          line-height: 3vw;
-        }
-        #shape1::after {
-          border-top-width: 1vw;
-          border-left-width: 2.2vw;
-          border-bottom-width: 1vw;
-          top: 10.6vw;
-          left: 101%; 
-          transform: rotate(-17deg);
-        }
-        #shape1 .item1,
-        #shape1 .item2 {
-          font-size: 3vw;
-          line-height: 1vw;
-        }
-
-        /* Footer Hardware Content */
-        .footer-content h4 {
-          font-size: 1.9vw;
-        }
-        .footer-content p {
-          font-size: 1.5vw;
-        }
-        .footer-content h5 {
-          font-size: 1.7vw;
-        }
-
-        /* Feature Hardware Content */
-        .feature-content {
-          height: 46vw;
-        }
-        .feature-content::after {
-          height: 40vw;
-        }
-        .feature-content .f-content p {
-          margin-bottom: 6.7vw;
-          font-size: 2vw;
-        }
-        .feature-content .f-content iframe {
-          width: 28vw;
-          height: 15.5vw;
-        }
-        .feature-content .f-image {
-          width: 39.5vw;
-        }
-
-        /* Specification Hardware */
-        .specification-table h3 {
-          font-size: 2.5vw
-        }
-        .specification-table table {
-          font-size: 1.5vw;
-        }
-
-        /* Included Parts Content */
-        .included-item .text {
-          font-size: 1.5vw;
-        }
+      /* Table */
+      .table {
+        font-size: 12px;
+      }
+      .table tr th {
+        vertical-align: middle;
+        background-color: #f2f2f2;
       }
     </style>
   </head>
@@ -896,423 +380,207 @@
         </nav>
       </div>
     </header>
-    <!-- Body Section / Content Section -->
-    <div class="container-fluid">
-      <!-- Header Content -->
-      <div class="container-xl header-content">
-        <!-- Heading Hardware Content -->
-        <div class="heading-hardware">
-          <img class="mikrotik-logo" src="src/img/mikrotik-logo.png" alt="Mikrotik Logo" />
-          <h1>hAP ax<sup>2</sup></h1>
-          <h2>The next generation of home access point perfection.</h2>
-          <h3>Futuristic design. Classic value.</h3>
-        </div>
-        <!-- Highlight Hardware Content -->
-        <div class="row highlight-hardware">
-          <div class="col-4 d-flex align-items-center">
-            <div class="row">
-              <div class="d-flex align-items-center h-item">
-                <img src="src/icons/h-icon1.png" alt="Powerful Quad-Core ARM CPU" />
-                <span class="ms-4"><b>POWERFUL <br> QUAD-CORE ARM CPU</b></span>
+    <!-- Body Section -->
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb  my-2">
+          <li class="breadcrumb-item"><i class="bi bi-house"></i></li>
+          <li class="breadcrumb-item">Products</li>
+          <li class="breadcrumb-item">MikroTik Router hEX RB750Gr3</li>
+        </ol>
+      </nav>
+      <!-- Product Item -->
+      <div class="row">
+        <!-- Image Thumbnail -->
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="large-image-thumbnail d-flex justify-content-center">
+                <img id="large-image" src="src/img/image-gallery/image01.png" alt="hEX" />
               </div>
-              <div class="d-flex align-items-center h-item">
-                <img src="src/icons/h-icon2.png" alt="802.11AX + WAVE2" />
-                <span class="ms-4"><b>802.11AX + WAVE2</b></span>
-              </div>
-              <div class="d-flex align-items-center h-item">
-                <img src="src/icons/h-icon3.png" alt="Strong Dual-Band, Dual-Chain Wireless (4-4.5 DBI)" />
-                <span class="ms-4"><b>STRONG DUAL-BAND, <br> DUAL-CHAIN WIRELESS <br> (4-4.5 DBI)</b></span>
-              </div>
-              <div class="d-flex align-items-center h-item">
-                <img src="src/icons/h-icon4.png" alt="5X Gigabit Ethernet Ports" />
-                <span class="ms-4"><b>5X GIGABIT ETHERNET <br> PORTS</b></span>
-              </div>
-              <div class="d-flex align-items-center h-item">
-                <img src="src/icons/h-icon5.png" alt="Poe-Out" />
-                <span class="ms-4"><b>POE-OUT</b></span>
-              </div>
-              <div class="d-flex align-items-center h-item">
-                <img src="src/icons/h-icon6.png" alt="Different Mounting Options" />
-                <span class="ms-4"><b>DIFFERENT MOUNTING <br> OPTIONS</b></span>
-              </div>
-              <div class="d-flex align-items-center h-item">
-                <img src="src/icons/h-icon7.png" alt="WPA3" />
-                <span class="ms-4"><b>WPA3</b></span>
+            </div>
+            <div class="col-12">
+              <div class="small-image-thumbnail d-flex justify-content-between">
+                <div class="item"><img src="src/img/image-gallery/image01.png" alt="hEX" onclick="imageFocus(this)" /></div>
+                <div class="item"><img src="src/img/image-gallery/image02.png" alt="hEX" onclick="imageFocus(this)" /></div>
+                <div class="item"><img src="src/img/image-gallery/image03.png" alt="hEX" onclick="imageFocus(this)" /></div>
+                <div class="item"><img src="src/img/image-gallery/image04.png" alt="hEX" onclick="imageFocus(this)" /></div>
               </div>
             </div>
           </div>
-          <div class="col-8">
-            <div class="position-relative">
-              <img class="img-hardware" src="src/img/hAPax2.png" alt="hAPax2" />
-              <div class="badges-img-hardware">
-                <div id="shape1">
-                <h3>
-                  <span class="item1">Gen 6</span><br>
-                  <span class="item2"><b>Wireless</b></span>
-                </h3>
+        </div>
+        <!-- Detail Product -->
+        <div class="col-md-6">
+          <!-- Wrap -->
+          <div class="mx-2">
+            <!-- Title Product -->
+            <div class="title-product">
+              <h2>MIKROTIK Router hEX RB750GR3</h2>
+              <p>hEX with Dual Core 880MHz MHz CPU, 256MB RAM, 5 Gigabit LAN ports, USB, RouterOS L4, plastic case, PSU</p>
+            </div>
+            <hr class="mb-3">
+            <!-- Pricing Product -->
+            <div class="pricing-product">
+              <div class="row">
+                <div class="col-3">
+                  <p>Price</p>
+                  <p>Category</p>
+                  <p>SKU</p>
+                  <p class="mb-3">Quantity</p>
+                  <p>Brochure</p>
+                </div>
+                <div class="col-5">
+                  <h4>SGD 99</h4>
+                  <p>Ethernet Router</p>
+                  <p>MTIK-RB750Gr3</p>
+                  <div class="count-quantity d-flex">
+                    <button id="subtract">&minus;</button>
+                    <input type="amount" id="count" value="0" min="0" />
+                    <button id="addition">&plus;</button>
+                  </div>
+                  <span class="mb-1 d-block">in stock: 400 units</span>
+                  <div><i class="bi bi-file-earmark-pdf"></i></div>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn btn-dark d-block"><b>ADD TO CART</b></button>
+              </div>
+              <div class="d-flex flex-row">
+                <!-- Share Button -->
+                <div class="share-button d-flex">
+                  <i class="bi bi-share"></i>
+                  <!-- Item -->
+                  <div class="item d-flex">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-telegram"></i>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Footer Hardware Content -->
-        <div class="container-xl pb-5 text-center text-white footer-content">
-          <h4><b>THE SMALLLEST FULLY-FLEDGED AX ROUTER ON THE MARKET!</b></h4>
-          <p>Like the previous models, hAP ax<sup>2</sup> can be mounted vertically 
-            horizontally, or even on the wall - without sacrificing the strong signal.
-          </p>
-          <h5>We did our best to create the smallest dual-band AX router on the market. Enjoy next level <br>
-            connectivity without giant, obtrusive devices that take up way to much space!
-          </h5>
-        </div>
       </div>
-      <!-- Body Content -->
-      <div class="container-xl p-0 body-content">
-        <!-- Feature Hardware Content -->
-        <div class="feature-content">
-          <div class="row">
-            <div class="col-7">
-              <div class="f-content">
-                <p>It’s time to supercharge your home network with the <br>
-                  Generation 6 wireless network and our latest addition <br>
-                  to the beloved hAP series. hAP ax² has everything <br>
-                  you might need in a primary home access point – <br>
-                  and more! Forget endless reviews and comparisons <br>
-                  – this is the perfect device for 99% of homes.
-                </p>
-                <iframe width="320" height="185" src="https://www.youtube.com/embed/aRPKUDvNyjM?controls=0" 
-                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-            <div class="col-5 position-relative">
-              <img class="f-image" src="src/img/hAPax2(2).png" alt="hAPax2" />
-            </div>
-          </div>
-        </div>
-        <!-- Summary Hardware Content -->
-        <div class="summary-content">
-          <div class="f-content">
-            <p><i>
-              <strong>Wireless signal is now stronger than ever.</strong> Here are the two main ingredients <br>
-              of hAP ax’s success: a state-of-the-art dual-band, dual-chain 4-4.5 dBi radio, <br>
-              and the 802.11ax standard with Wave2 support. Let’s compare it to the previous <br>
-              generation: depending on your overall setup, that means up to 40% higher <br>
-              speed in the 5 GHz and up to 90% higher speed in the 2.4 GHz spectrum!</i>
+      <!-- Description -->
+      <div class="mt-3">
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#description">Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#additional-information">Additional Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#comments">Comments</a>
+          </li>
+        </ul>
+        <!-- Tab Panes -->
+        <div class="tab-content">
+          <div id="description" class="container tab-pane active"><br>
+            <p>hEX is a five port Gigabit Ethernet router for locations where wireless 
+              connectivity is not required. The device has a full size USB port. This new 
+              updated revision of the hEX brings several improvements in performance.
             </p>
-            <div id="shape2"></div>
+            <ul>
+              <li>hEX (revision 4)</li>
+              <li>880 MHz CPU, 2 cores and 4 threads</li>
+              <li>256 MB RAM</li>
+              <li>microSD slot for “Dude Server” support</li>
+              <li>Full size USB</li>
+              <li>IPsec hardware acceleration ~450 Mbps</li>
+            </ul>
+            <p>It is affordable, small and easy to use, but at the same time comes with a 
+              very powerful dual core 880MHz CPU and 256MB RAM, capable of all the advanced 
+              configurations that RouterOS supports. IPsec Hardware encryption (~450Mbps) and 
+              dude server package is supported, microSD slot on it also provides improved r/w 
+              speed for database storage on microSD card.
+            </p>
+            <p>ATik, a hardened version of MikroTik router by Alagas, include hEX. You can purchase it in LazMall.</p>
+            <hr class="mb-2">
+            <!-- Table -->
+            <h4>IPsec test results</h4>
+            <table class="table">
+              <tr>
+                <th colspan="2">RB750Gr3</th>
+                <th colspan="6">MT7621A IPsec throughput</th>
+              </tr>
+              <tr>
+                <th rowspan="3">Mode</th>
+                <th rowspan="3">Configuration</th>
+              </tr>
+              <tr>
+                <th colspan="2">1400 byte</th>
+                <th colspan="2">512 byte</th>
+                <th colspan="2">64 byte</th>
+              </tr>
+              <tr>
+                <th>kpps</th>
+                <th>Mbps</th>
+                <th>kpps</th>
+                <th>Mbps</th>
+                <th>kpps</th>
+                <th>Mbps</th>
+              </tr>
+              <tr>
+                <td>Single tunnel</td>
+                <td>AES-128-CBC + SHA1</td>
+                <td>41.9</td>
+                <td>469.3</td>
+                <td>42.3</td>
+                <td>173.3</td>
+                <td>41.5</td>
+                <td>21.2</td>
+              </tr>
+              <tr>
+                <td>256 tunnels</td>
+                <td>AES-128-CBC + SHA1</td>
+                <td>41.9</td>
+                <td>469.3</td>
+                <td>43.7</td>
+                <td>179</td>
+                <td>42.7</td>
+                <td>21.9</td>
+              </tr>
+              <tr>
+                <td>256 tunnels</td>
+                <td>AES-128-CBC + SHA256</td>
+                <td>42.2</td>
+                <td>472.6</td>
+                <td>44.4</td>
+                <td>181.9</td>
+                <td>42.7</td>
+                <td>21.9</td>
+              </tr>
+              <tr>
+                <td>256 tunnels</td>
+                <td>AES-256-CBC + SHA1</td>
+                <td>32</td>
+                <td>358.4</td>
+                <td>40</td>
+                <td>163.8</td>
+                <td>40.5</td>
+                <td>20.7</td>
+              </tr>
+              <tr>
+                <td>256 tunnels</td>
+                <td>AES-256-CBC + SHA256</td>
+                <td>32.1</td>
+                <td>359.5</td>
+                <td>39.7</td>
+                <td>162.6</td>
+                <td>40.5</td>
+                <td>20.7</td>
+              </tr>
+            </table>
           </div>
-        </div>
-        <!-- Content -->
-        <div class="content">
-          <div class="c-content">
-            <div class="row">
-              <div class="col-6">
-                <p>Some might ask – why do we even need  <br>
-                  higher wireless speeds? Well, countless use <br>
-                  cases have been previously impossible or <br>
-                  difficult to pull off. For example, working with <br>
-                  large media files over the wireless network <br>
-                  – without the need to download and upload <br>
-                  everything. Do you really have the time to <br>
-                  wait? Grab a hAP ax² and save more time <br>
-                  for the essential things in life!
-                </p>
-              </div>
-              <div class="col-6">
-                <img src="src/img/hAPax2-net.png" alt="hAPax2 Networking" />
-              </div>
-            </div>
+          <div id="additional-information" class="container tab-pane fade"><br>
+            <p>Additional Information Section</p>
           </div>
-          <div class="s-content">
-            <div class="row">
-              <span class="p-0 d-flex align-items-center">
-                <i class="bi bi-exclamation-circle"></i>
-              </span>
-              <p>
-                The wireless interface supports 802.11ax and is backward compatible with older wireless standards. Older client <br>
-                devices that only support 802.11ac will still benefit from multiple additional 802.11ac Wave 2 features, such as MU-MIMO <br>
-                and explicit beamforming.
-              </p>
-            </div>
+          <div id="comments" class="container tab-pane fade"><br>
+            <p>Comment Section</p>
           </div>
-          <div class="h-content">
-            <div class="row">
-              <p>The modern quad-core CPU running at 864 MHz combined with a solid GB of RAM 
-                packs a hefty punch when it comes to heavy operations like <b>complex firewall rules</b>,
-                <b>IPsec hardware encryption, using more threads</b> or experimenting with the most
-                advanced RouterOS features. And with the addition of WPA3 advanced encryption
-                support, you’re safer than ever before.
-              </p>
-            </div>
-            <div class="row m-0 position-relative">
-              <img class="p-0" src="src/img/highlight-img1.png" alt="Highlight Image 1" />
-              <span class="text-img1">
-                Like the previous models, <b>hAP ax²</b> can be <br>
-                mounted vertically, horizontally, or even on <br>
-                the wall – without sacrificing the strong signal!
-              </span>
-            </div>
-            <div class="row m-0 position-relative">
-              <img class="p-0" src="src/img/highlight-img2.png" alt="Highlight Image 2" />
-              <span class="text-img2">
-                With so many products and features on <br>
-                the market, even an experienced user can <br>
-                become confused. So it’s time for a <b>simple <br>
-                  truth for a simple choice</b>: you can’t go wrong <br>
-                with a <b>hAP ax²</b> in most homes. 
-              </span>
-            </div>
-          </div>
-          <hr class="mt-5">
-        </div>
-        <!-- Specification Hardware -->
-        <div class="specification-table">
-          <!-- Specifications Table -->
-          <h3>
-            <i class="bi bi-hexagon-fill me-3"></i>
-            <b>Specifications</b>
-          </h3>
-          <table class="table">
-            <tr>
-              <th>Product code</th>
-              <td>C52iG-5HaxD2HaxD-TC</td>
-            </tr>
-            <tr>
-              <th>CPU</th>
-              <td>Quad-Core IPQ-6010 864 MHz</td>
-            </tr>
-            <tr>
-              <th>CPU architecture</th>
-              <td>ARM 64bit</td>
-            </tr>
-            <tr>
-              <th>Size of RAM</th>
-              <td>1 GB</td>
-            </tr>
-            <tr>
-              <th>Storage</th>
-              <td>128 MB, NAND</td>
-            </tr>
-            <tr>
-              <th>Number of 1G Ethernet ports</th>
-              <td>5</td>
-            </tr>
-            <tr>
-              <th>Number of 1G Ethernet ports with PoE-out</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>Switch chip model</th>
-              <td>IPQ-6010</td>
-            </tr>
-            <tr>
-              <th>Wireless interface model</th>
-              <td>QCN-5052 (2.4 GHz), QCN-5052 (5 GHz)</td>
-            </tr>
-            <tr>
-              <th>Wireless</th>
-              <td>2.4 GHz 802.11ax dual-chain, 5 GHz 802.11 802.11ax dual-chain</td>
-            </tr>
-            <tr>
-              <th>Wireless antenna max gain</th>
-              <td>2.4 GHz (4.5 dBi), 5 GHz (4 dBi)</td>
-            </tr>
-            <tr>
-              <th>Dimensions</th>
-              <td>120 x 101 x 37 mm</td>
-            </tr>
-            <tr>
-              <th>Operating system</th>
-              <td>RouterOS, License level 4</td>
-            </tr>
-            <tr>
-              <th>Operating temperature</th>
-              <td>-40°C to +50°C</td>
-            </tr>
-          </table>
-          <!-- Powering Table -->
-          <h3>
-            <i class="bi bi-hexagon-fill me-3"></i>
-            <b>Powering</b>
-          </h3>
-          <table class="table">
-            <tr>
-              <th>Number of DC inputs</th>
-              <td>2 (PoE-in, DC jack)</td>
-            </tr>
-            <tr>
-              <th>PoE-in input Voltage</th>
-              <td>18-28 V</td>
-            </tr>
-            <tr>
-              <th>DC jack input Voltage</th>
-              <td>12-28 V</td>
-            </tr>
-            <tr>
-              <th>PoE-out</th>
-              <td>Passive PoE Ether1, max out per port output (input < 30 V): 600mA</td>
-            </tr>
-            <tr>
-              <th>Max total out</th>
-              <td>0.6 A</td>
-            </tr>
-            <tr>
-              <th>Total output power</th>
-              <td>16.8 W</td>
-            </tr>
-            <tr>
-              <th>Power adapter nominal voltage</th>
-              <td>24 V</td>
-            </tr>
-            <tr>
-              <th>Power adapter nominal current</th>
-              <td>1.2 A</td>
-            </tr>
-            <tr>
-              <th>Max power consumption (without attachments)</th>
-              <td>12 W</td>
-            </tr>
-            <tr>
-              <th>Max power consumption</th>
-              <td>27 W</td>
-            </tr>
-          </table>
-          <!-- Wireless Specifications -->
-          <h3>
-            <i class="bi bi-hexagon-fill me-3"></i>
-            <b>Wireless specifications</b>
-          </h3>
-          <div class="row">
-            <div class="col-md-6">
-              <table class="table">
-                <tr>
-                  <th>Rate (2.4 GHz)</th>
-                  <td>Tx (dBm)</td>
-                  <td>Rx (dBm)</td>  
-                </tr>
-                <tr>
-                  <th>1MBit/s</th>
-                  <td>22</td>
-                  <td>-100</td>
-                </tr>
-                <tr>
-                  <th>11MBit/s</th>
-                  <td>22</td>
-                  <td>-94</td>
-                </tr>
-                <tr>
-                  <th>6MBit/s</th>
-                  <td>24</td>
-                  <td>-96</td>
-                </tr>
-                <tr>
-                  <th>54MBit/s</th>
-                  <td>22</td>
-                  <td>-80</td>
-                </tr>
-                <tr>
-                  <th>MCS0</th>
-                  <td>24</td>
-                  <td>-96</td>
-                </tr>
-                <tr>
-                  <th>MCS7</th>
-                  <td>21</td>
-                  <td>-75</td>
-                </tr>
-                <tr>
-                  <th>MCS9</th>
-                  <td>19</td>
-                  <td>-70</td>
-                </tr>
-                <tr>
-                  <th>MCS11</th>
-                  <td>17</td>
-                  <td>-67</td>
-                </tr>
-              </table>
-            </div>
-            <div class="col-md-6">
-              <table class="table">
-                <tr>
-                  <th>Rate (5 GHz)</th>
-                  <td>Tx (dBm)</td>
-                  <td>Rx (dBm)</td>
-                </tr>
-                <tr>
-                  <th>6MBit/s</th>
-                  <td>23</td>
-                  <td>-96</td>
-                </tr>
-                <tr>
-                  <th>54MBit/s</th>
-                  <td>20</td>
-                  <td>-80</td>
-                </tr>
-                <tr>
-                  <th>MCS0</th>
-                  <td>22</td>
-                  <td>-96</td>
-                </tr>
-                <tr>
-                  <th>MCS7</th>
-                  <td>19</td>
-                  <td>-75</td>
-                </tr>
-                <tr>
-                  <th>MCS9</th>
-                  <td>17</td>
-                  <td>-70</td>
-                </tr>
-                <tr>
-                  <th>MCS11</th>
-                  <td>15</td>
-                  <td>-67</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <!-- Included Parts Content -->
-          <h3>
-            <i class="bi bi-hexagon-fill me-3"></i>
-            <b>Included parts</b>
-          </h3>
-          <div class="d-flex flex-row included-part">
-            <div class="included-item">
-              <img src="src/img/power-adapter.png" alt="Power Adapter" />
-              <span class="d-flex align-items-center"><i class="bi bi-hexagon-fill"></i></span>
-              <span class="d-block text text-center">24 V 1.2 A <br> power adapter</span>
-            </div>
-            <div class="ms-3 included-item">
-              <img src="src/img/fastening-set.png" alt="Fastening Set" />
-              <span class="d-flex align-items-center"><i class="bi bi-hexagon-fill"></i></span>
-              <span class="d-block text text-center">Fastening <br> set</span>
-            </div>
-            <div class="ms-3 included-item">
-              <img src="src/img/case-base.png" alt="Case Base" />
-              <span class="d-flex align-items-center"><i class="bi bi-hexagon-fill"></i></span>
-              <span class="d-block text text-center">Case Base</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Social Media Share -->
-    <div class="social-media">
-      <div class="social-media-header d-flex flex-row justify-content-start align-items-center">
-        <i class="bi bi-share d-flex align-items-center"></i>
-        <div class="all-item d-flex flex-column">
-          <a href="https://twitter.com/intent/tweet?text=https://wigard.github.io/testDeploy/" target="_blank">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a href="https://t.me/share/url?url=https://wigard.github.io/testDeploy/" target="_blank">
-            <i class="bi bi-telegram"></i>
-          </a>
-          <a href="https://web.facebook.com/sharer.php?u=https://wigard.github.io/testDeploy/" target="_blank">
-            <i class="bi bi-facebook"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -1412,5 +680,31 @@
     </script>
     <script src="https://asset.alagas.net/shopy-vendor.min.js"></script>
     <script src="https://asset.alagas.net/shopy-app.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+      // Image Thumbnail
+      function imageFocus(smallImg) {
+        let largeImg = document.getElementById('large-image');
+        largeImg.src = smallImg.src;
+      }
+
+      // Count Quantity
+      let subtractButton =  document.getElementById('subtract');
+      let countInput = document.getElementById('count');
+      let additionButton = document.getElementById('addition');
+
+      subtractButton.addEventListener('click', () => {
+        const currentValue = Number(countInput.value) || 0;
+        if(currentValue > 0) {
+          countInput.value = currentValue - 1; 
+        }
+      });
+
+      additionButton.addEventListener('click', () => {
+        const currentValue = Number(countInput.value) || 0;
+        countInput.value = currentValue + 1; 
+      });
+    </script>
+    </script>
   </body>
 </html>
