@@ -72,21 +72,6 @@
         font-family: 'Poppins', sans-serif;  
         color: #1ABC9C;
       }
-      /* Quantity */
-      .count-quantity #subtract,
-      .count-quantity #addition {
-        width: 30px;
-        border: 1px solid #e6e6e6;
-        text-align: center;
-      }
-      .count-quantity #count {
-        width: 50px;
-        border: 1px solid #f2f2f2;
-        text-align: center;
-      }
-      .pricing-product span {
-        font-size: 12px;
-      }
       .pricing-product .col-3, .pricing-product .col-lg-3 {
         margin-right: 10px;
         font-family: monospace;
@@ -530,25 +515,12 @@
                   <p>Ethernet Router</p>
                 </div>
               </div>
-              <div class="row mb-1">
+              <div class="row mb-2">
                 <div class="col-3">
                   <p>SKU</p>
                 </div>
                 <div class="col-5">
                   <p>MTIK-RB750Gr3</p>
-                </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-3">
-                  <p class="mb-3">Quantity</p>
-                </div>
-                <div class="col-5">
-                  <div class="count-quantity d-flex">
-                    <button id="subtract">&minus;</button>
-                    <input type="amount" id="count" value="0" min="0" />
-                    <button id="addition">&plus;</button>
-                  </div>
-                  <span class="mb-1 d-block">in stock: 400 units</span>
                 </div>
               </div>
               <div class="row">
@@ -903,23 +875,6 @@
         let largeImg = document.getElementById('large-image');
         largeImg.src = smallImg.src;
       }
-
-      // Count Quantity
-      let subtractButton =  document.getElementById('subtract');
-      let countInput = document.getElementById('count');
-      let additionButton = document.getElementById('addition');
-
-      subtractButton.addEventListener('click', () => {
-        const currentValue = Number(countInput.value) || 0;
-        if(currentValue > 0) {
-          countInput.value = currentValue - 1; 
-        }
-      });
-
-      additionButton.addEventListener('click', () => {
-        const currentValue = Number(countInput.value) || 0;
-        countInput.value = currentValue + 1; 
-      });
     </script>
     </script>
   </body>
