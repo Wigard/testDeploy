@@ -58,6 +58,7 @@
         font-family: 'Poppins', sans-serif;  
         color: #1ABC9C;
       }
+      /* Quantity */
       .count-quantity #subtract,
       .count-quantity #addition {
         width: 30px;
@@ -72,7 +73,7 @@
       .pricing-product span {
         font-size: 12px;
       }
-      .pricing-product .col-3 {
+      .pricing-product .col-3, .pricing-product .col-sm-3 {
         font-family: monospace;
         color: #404040;
       }
@@ -81,6 +82,14 @@
       }
       .pricing-product button:hover {
         box-shadow: 0px 0px 2px #30802a;
+      }
+      /* Marketplace */
+      .marketplace a {
+        display: inline-block;
+        margin-right: 25px;
+      }
+      .marketplace img {
+        max-width: 80px !important;
       }
       /* Share Button */
       .share-button {
@@ -104,9 +113,22 @@
         left: -120px;
         z-index: -1;
       }
-
+      /* Twitter Icon */
+      .share-button .bi-twitter:hover {
+        color: #1DA1F2;
+      }
+      /* Telegram Icon */
+      .share-button .bi-telegram:hover {
+        color: #0088CC;
+      }
+      .share-button .bi-facebook:hover {
+        color: #3b5998;
+      }
       /* Description */
       /* Nav Tabs */
+      .nav {
+        border-bottom: 1px solid #e6e6e6;
+      }
       .nav .nav-link.active {
         color: #fff;
       }
@@ -116,12 +138,67 @@
         list-style-position: inside;
       }
       /* Table */
+      /* Description */
+      .accordion-item {
+        background-color: #fcfcfc;
+      }
+      .accordion button {
+        padding: 10px;
+      }
       .table {
         font-size: 12px;
       }
       .table tr th {
         vertical-align: middle;
         background-color: #f2f2f2;
+      }
+      /* Comments */
+      #comments .date i {
+        background-color: #f2f2f2;
+      }
+      #comments .date .bi-person-fill::before {
+        padding: 0px 10px 10px 10px;
+      }
+      #comments .date {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 12px;
+      }
+      #comments .addComment {
+        border-radius: 3px;
+        color: #fff;
+        background-color: #383333;
+      }
+      #comments .addComment:hover {
+        background-color: #1a1717;
+      }
+      /* Modal */
+      .modal-footer .cancelButton{
+        border: none;
+        background-color: #fff;
+      }
+      .modal-footer .submitComment {
+        border-radius: 3px;
+        color: #fff;
+        background-color: #383333;
+      }
+      .modal-footer .submitComment:hover {
+        background-color: #1a1717;
+      }
+      .modal-footer .submitComment:active {
+        background-color: #fff;
+      }
+
+      /* Responsive */
+      @media only screen and (max-width: 1199px) {
+        /* Product Item */
+        /* Image Thumbnail */
+        .large-image-thumbnail img {
+          height: 20vh;
+        }
+        .small-image-thumbnail img {
+          height: 5vh;
+        }
       }
     </style>
   </head>
@@ -402,10 +479,10 @@
             </div>
             <div class="col-12">
               <div class="small-image-thumbnail d-flex justify-content-between">
-                <div class="item"><img src="src/img/image-gallery/image01.png" alt="hEX" onclick="imageFocus(this)" /></div>
-                <div class="item"><img src="src/img/image-gallery/image02.png" alt="hEX" onclick="imageFocus(this)" /></div>
-                <div class="item"><img src="src/img/image-gallery/image03.png" alt="hEX" onclick="imageFocus(this)" /></div>
-                <div class="item"><img src="src/img/image-gallery/image04.png" alt="hEX" onclick="imageFocus(this)" /></div>
+                <div class="item align-items-center"><img src="src/img/image-gallery/image01.png" alt="hEX" onclick="imageFocus(this)" /></div>
+                <div class="item align-items-center"><img src="src/img/image-gallery/image02.png" alt="hEX" onclick="imageFocus(this)" /></div>
+                <div class="item align-items-center"><img src="src/img/image-gallery/image03.png" alt="hEX" onclick="imageFocus(this)" /></div>
+                <div class="item align-items-center"><img src="src/img/image-gallery/image04.png" alt="hEX" onclick="imageFocus(this)" /></div>
               </div>
             </div>
           </div>
@@ -422,29 +499,65 @@
             <hr class="mb-3">
             <!-- Pricing Product -->
             <div class="pricing-product">
-              <div class="row">
+              <div class="row mb-1">
                 <div class="col-3">
                   <p>Price</p>
-                  <p>Category</p>
-                  <p>SKU</p>
-                  <p class="mb-3">Quantity</p>
-                  <p>Brochure</p>
                 </div>
                 <div class="col-5">
                   <h4>SGD 99</h4>
+                </div>         
+              </div>
+              <div class="row mb-1">
+                <div class="col-3">
+                  <p>Category</p>
+                </div>
+                <div class="col-5">
                   <p>Ethernet Router</p>
+                </div>
+              </div>
+              <div class="row mb-1">
+                <div class="col-3">
+                  <p>SKU</p>
+                </div>
+                <div class="col-5">
                   <p>MTIK-RB750Gr3</p>
+                </div>
+              </div>
+              <div class="row mb-1">
+                <div class="col-3">
+                  <p class="mb-3">Quantity</p>
+                </div>
+                <div class="col-5">
                   <div class="count-quantity d-flex">
                     <button id="subtract">&minus;</button>
                     <input type="amount" id="count" value="0" min="0" />
                     <button id="addition">&plus;</button>
                   </div>
                   <span class="mb-1 d-block">in stock: 400 units</span>
-                  <div><i class="bi bi-file-earmark-pdf"></i></div>
                 </div>
               </div>
               <div class="row">
-                <button class="btn btn-dark d-block"><b>ADD TO CART</b></button>
+                <div class="col-sm-3 mb-2">
+                  <p>Marketplace</p>
+                </div>
+                <div class="col-sm-5">
+                  <div class="marketplace d-flex">
+                    <a href="#">
+                      <img src="src/icons/icon_tokopedia.png" alt="Tokopedia" />
+                    </a>
+                    <a href="#">
+                      <img src="src/icons/icon_shopee.png" alt="Shopee" />
+                    </a>
+                    <a href="#">
+                      <img src="src/icons/icon_blibli.png" alt="Blibli" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <button class="btn btn-sm btn-outline-dark">Brochure</button>
+                </div>
               </div>
               <div class="d-flex flex-row">
                 <!-- Share Button -->
@@ -452,9 +565,15 @@
                   <i class="bi bi-share"></i>
                   <!-- Item -->
                   <div class="item d-flex">
-                    <i class="bi bi-facebook"></i>
-                    <i class="bi bi-twitter"></i>
-                    <i class="bi bi-telegram"></i>
+                    <a href="https://web.facebook.com/sharer.php?u=https://wigard.github.io/testDeploy/">
+                      <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=https://wigard.github.io/testDeploy/">
+                      <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://wigard.github.io/testDeploy/">
+                      <i class="bi bi-telegram"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -470,14 +589,12 @@
             <a class="nav-link active" data-bs-toggle="tab" href="#description">Description</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#additional-information">Additional Information</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" href="#comments">Comments</a>
           </li>
         </ul>
         <!-- Tab Panes -->
-        <div class="tab-content">
+        <div class="tab-content mb-3">
+          <!-- Description -->
           <div id="description" class="container tab-pane active"><br>
             <p>hEX is a five port Gigabit Ethernet router for locations where wireless 
               connectivity is not required. The device has a full size USB port. This new 
@@ -500,86 +617,170 @@
             <p>ATik, a hardened version of MikroTik router by Alagas, include hEX. You can purchase it in LazMall.</p>
             <hr class="mb-2">
             <!-- Table -->
-            <h4>IPsec test results</h4>
-            <table class="table">
-              <tr>
-                <th colspan="2">RB750Gr3</th>
-                <th colspan="6">MT7621A IPsec throughput</th>
-              </tr>
-              <tr>
-                <th rowspan="3">Mode</th>
-                <th rowspan="3">Configuration</th>
-              </tr>
-              <tr>
-                <th colspan="2">1400 byte</th>
-                <th colspan="2">512 byte</th>
-                <th colspan="2">64 byte</th>
-              </tr>
-              <tr>
-                <th>kpps</th>
-                <th>Mbps</th>
-                <th>kpps</th>
-                <th>Mbps</th>
-                <th>kpps</th>
-                <th>Mbps</th>
-              </tr>
-              <tr>
-                <td>Single tunnel</td>
-                <td>AES-128-CBC + SHA1</td>
-                <td>41.9</td>
-                <td>469.3</td>
-                <td>42.3</td>
-                <td>173.3</td>
-                <td>41.5</td>
-                <td>21.2</td>
-              </tr>
-              <tr>
-                <td>256 tunnels</td>
-                <td>AES-128-CBC + SHA1</td>
-                <td>41.9</td>
-                <td>469.3</td>
-                <td>43.7</td>
-                <td>179</td>
-                <td>42.7</td>
-                <td>21.9</td>
-              </tr>
-              <tr>
-                <td>256 tunnels</td>
-                <td>AES-128-CBC + SHA256</td>
-                <td>42.2</td>
-                <td>472.6</td>
-                <td>44.4</td>
-                <td>181.9</td>
-                <td>42.7</td>
-                <td>21.9</td>
-              </tr>
-              <tr>
-                <td>256 tunnels</td>
-                <td>AES-256-CBC + SHA1</td>
-                <td>32</td>
-                <td>358.4</td>
-                <td>40</td>
-                <td>163.8</td>
-                <td>40.5</td>
-                <td>20.7</td>
-              </tr>
-              <tr>
-                <td>256 tunnels</td>
-                <td>AES-256-CBC + SHA256</td>
-                <td>32.1</td>
-                <td>359.5</td>
-                <td>39.7</td>
-                <td>162.6</td>
-                <td>40.5</td>
-                <td>20.7</td>
-              </tr>
-            </table>
+            <div class="accordion mb-3">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="tableHeading">
+                  <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#accordionTable"
+                    aria-expanded="true" aria-controls="accordionTable">
+                    IPsec test results
+                  </button>
+                </h4>
+                <div class="accordion-collapse collapse" id="accordionTable" aria-labelledby="tableHeading">
+                  <div class="accordion-body">
+                    <table class="table">
+                      <tr>
+                        <th colspan="2">RB750Gr3</th>
+                        <th colspan="6">MT7621A IPsec throughput</th>
+                      </tr>
+                      <tr>
+                        <th rowspan="3">Mode</th>
+                        <th rowspan="3">Configuration</th>
+                      </tr>
+                      <tr>
+                        <th colspan="2">1400 byte</th>
+                        <th colspan="2">512 byte</th>
+                        <th colspan="2">64 byte</th>
+                      </tr>
+                      <tr>
+                        <th>kpps</th>
+                        <th>Mbps</th>
+                        <th>kpps</th>
+                        <th>Mbps</th>
+                        <th>kpps</th>
+                        <th>Mbps</th>
+                      </tr>
+                      <tr>
+                        <td>Single tunnel</td>
+                        <td>AES-128-CBC + SHA1</td>
+                        <td>41.9</td>
+                        <td>469.3</td>
+                        <td>42.3</td>
+                        <td>173.3</td>
+                        <td>41.5</td>
+                        <td>21.2</td>
+                      </tr>
+                      <tr>
+                        <td>256 tunnels</td>
+                        <td>AES-128-CBC + SHA1</td>
+                        <td>41.9</td>
+                        <td>469.3</td>
+                        <td>43.7</td>
+                        <td>179</td>
+                        <td>42.7</td>
+                        <td>21.9</td>
+                      </tr>
+                      <tr>
+                        <td>256 tunnels</td>
+                        <td>AES-128-CBC + SHA256</td>
+                        <td>42.2</td>
+                        <td>472.6</td>
+                        <td>44.4</td>
+                        <td>181.9</td>
+                        <td>42.7</td>
+                        <td>21.9</td>
+                      </tr>
+                      <tr>
+                        <td>256 tunnels</td>
+                        <td>AES-256-CBC + SHA1</td>
+                        <td>32</td>
+                        <td>358.4</td>
+                        <td>40</td>
+                        <td>163.8</td>
+                        <td>40.5</td>
+                        <td>20.7</td>
+                      </tr>
+                      <tr>
+                        <td>256 tunnels</td>
+                        <td>AES-256-CBC + SHA256</td>
+                        <td>32.1</td>
+                        <td>359.5</td>
+                        <td>39.7</td>
+                        <td>162.6</td>
+                        <td>40.5</td>
+                        <td>20.7</td>
+                      </tr>
+                    </table>  
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="additional-information" class="container tab-pane fade"><br>
-            <p>Additional Information Section</p>
-          </div>
+          <!-- Comments -->
           <div id="comments" class="container tab-pane fade"><br>
-            <p>Comment Section</p>
+            <div class="row">
+              <div class="col-1 d-flex justify-content-center">
+                <h2><i class="bi bi-person-fill w-100 h-100"></i></h2>
+              </div>
+              <div class="col-11">
+                <div>Name Account</div>
+                <span class="date"><i>2023-01-15 00:00</i></span>
+                <p>Packing was good. Delivery was fast. User friendly, plug and play. Very good build quality.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1 d-flex justify-content-center">
+                <h2><i class="bi bi-person-fill w-100 h-100"></i></h2>
+              </div>
+              <div class="col-11">
+                <div>Name Account</div>
+                <span class="date"><i>2023-01-15 00:00</i></span>
+                <p>MikroTik lives up to its fame. Powerful features packed into a tiny but capable box for less 
+                  than $100. Customisation and support is enterprise-level by a certified network / security 
+                  engineer with deep knowledge, service is prompt and effective. Apprehension allayed, VPN gateway 
+                  up and routing load alleviated from wireless. Cheers !!!
+                </p>
+              </div>
+            </div>
+            <hr class="mb-2">
+            <div class="d-block">
+              <!-- Button Modal -->
+              <button class="btn btn-sm addComment" type="submit" data-bs-toggle="modal" data-bs-target="#modal">
+                ADD A COMMENTS
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="modal" tabindex="-1" >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Submit a Comment</h5>
+                    </div>
+                    <div class="modal-body">
+                      <h3>Leave a Reply</h3>
+                      <p>Your email address will not be published. Required fields are marked *</p>
+                      <p><b>COMMENT *</b></p>
+                      <textarea class="form-control mb-2" rows="5"></textarea>
+                      <div class="row">
+                        <div class="col-6">
+                          <h5>NAME *</h5>
+                          <div class="input-group input-group-sm">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input class="form-control" type="text" />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5>EMAIL *</h5>
+                          <div class="input-group input-group-sm">
+                            <span class="input-group-text">@</span>
+                            <input class="form-control" type="text" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-group"></div>
+                      <p>
+                        <input type="checkbox" />
+                        SAVE MY NAME, EMAIL, AND WEBSITE IN THIS BROWSER FOR THE NEXT TIME I COMMENT.
+                      </p>
+                    </div>
+                    <hr>
+                    <div class="modal-footer">
+                      <button class="cancelButton me-4" type="button" data-bs-dismiss="modal">Cancel</button>
+                      <button class="btn submitComment justify-content-start" type="submit">Submit a Comment</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -674,10 +875,10 @@
       </div>
     </footer>
     <!-- Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous">
-    </script>
+    </script> -->
     <script src="https://asset.alagas.net/shopy-vendor.min.js"></script>
     <script src="https://asset.alagas.net/shopy-app.js"></script>
     <!-- Custom JavaScript -->
